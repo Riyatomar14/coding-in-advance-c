@@ -22,7 +22,7 @@ int main() {
     }
     return 0;
 }
-## 2.
+## 2.hollow rectangle
 # 5 4 
 # ****
 # *  *
@@ -54,7 +54,7 @@ int main() {
     }
     return 0;
 }
-## 3.
+## 3. inverted half pyramid
 # 5
 # *****
 # ****
@@ -78,5 +78,35 @@ int main() {
     }
     return 0;
 }
-## 4.
+## 4.upright pyramid
+# 5
+#     *
+#    **
+#   ***
+#  ****
+# *****
+
+code-
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;
+    
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if(j<=n-i){
+                cout<<" ";
+            }
+            else{
+                cout<<"*";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+## 5.upright pyramid with numbers 
 
