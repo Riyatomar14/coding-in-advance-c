@@ -7,6 +7,7 @@
 # ****
 # ****
 code- 
+
 #include <iostream>
 using namespace std;
 int main() {
@@ -22,13 +23,14 @@ int main() {
     return 0;
 }
 ## 2.
-5 4 
-****
-*  *
-*  *
-*  *
-****
+# 5 4 
+# ****
+# *  *
+# *  *
+# *  *
+# ****
 code-
+
 #include <iostream>
 using namespace std;
 int main() {
@@ -53,13 +55,15 @@ int main() {
     return 0;
 }
 ## 3.
-5
-*****
-****
-***
-**
-*
+# 5
+# *****
+# ****
+# ***
+# **
+# *
+
 code-
+
 #include <iostream>
 using namespace std;
 int main() {
