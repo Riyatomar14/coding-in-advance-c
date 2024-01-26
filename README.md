@@ -1,11 +1,11 @@
 # coding-in-advance-c
 ## 1. rectangle
-5 4 
-****
-****
-****
-****
-****
+# 5 4 
+# ****
+# ****
+# ****
+# ****
+# ****
 code- 
 #include <iostream>
 using namespace std;
