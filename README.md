@@ -148,7 +148,8 @@ int main()
 	return 0;
 }
 
-## 2.
+## 2.![image](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/dffdb347-adb9-4fa0-8bce-9d7190a2bc49)
+
 
 #include <iostream>
 using namespace std;
