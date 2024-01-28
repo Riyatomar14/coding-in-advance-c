@@ -184,7 +184,53 @@ int main()
     return 0;
 }
 
-string ltrim(const 
+## 3.![image](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/6617a035-5bf2-40fe-bbe0-c5fcd2e3011a)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c, d;
+    cin>>a>>b>>c>>d;
+    if(a>b){
+        if(a>c){
+            if(a>d){
+                cout<<a<<endl;
+            }
+            else{
+                cout<<d<<endl;
+            }
+            
+        }
+        else{
+            if(c>d){
+                cout<<c<<endl;
+            }
+            else{
+                cout<<d<<endl;
+            }
+        }
+    }
+    else{
+        if(b>c){
+            if(b>d){
+                cout<<b<<endl;
+            }
+        }
+        else{
+            if (c>d){
+                cout<<c<<endl;
+            }
+            else{
+                cout<<d<<endl;
+            }       
+        }
+        
+    }
+    return 0;
+}
+
+## 4.
 
 
 
