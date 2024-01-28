@@ -116,5 +116,43 @@ int main() {
 
 
 ## some advance questions 
-## 1.
+## 1.![Screenshot 2024-01-28 120626](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/8bb44c33-b976-4f19-b2e4-732f54532ed2)
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+/*For Loop Hackerrank Solution in C++*/
+
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+	string word[9] = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+
+	for (int i = num1; i <= num2; i++)
+	{
+		if (i <= 9)
+		{
+			cout << word[i - 1] << endl;
+		}
+		else
+		{
+			if (i % 2 == 0)
+			{
+				cout << "even" << endl;
+			}
+			else
+			{
+				cout << "odd" << endl;
+			}
+		}
+	}
+
+	return 0;
+}
+
+## 2.
+
+
 
