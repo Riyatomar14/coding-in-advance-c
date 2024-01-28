@@ -110,3 +110,11 @@ int main() {
 
 ## 5.upright pyramid with numbers 
 
+
+
+
+
+
+## some advance questions 
+## 1.
+
