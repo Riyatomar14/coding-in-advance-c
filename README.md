@@ -230,7 +230,9 @@ int main() {
     return 0;
 }
 
-## 4.
+## 4.![image](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/a7ab1930-b91a-4e0b-b69c-0b5607de118c)
+
+
 
 
 
