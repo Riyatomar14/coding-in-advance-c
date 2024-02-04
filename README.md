@@ -230,7 +230,18 @@ int main() {
     return 0;
 }
 
-## 4.![image](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/a7ab1930-b91a-4e0b-b69c-0b5607de118c)
+## 4.You'll be given an array of N integers and you have to print the integers in the reverse order.
+
+Input Format
+The first line of the input contains N, where N is the number of integers. The next line contains N integers separated by a space.
+
+Constraints
+1 <= N <= 1000
+1 <= Ai <= 10000, where Ai is the ith integer in the array.
+
+Output Format
+Print the N integers of the array in the reverse order in a single line separated by a space. */
+
 
 #include <iostream>
 using namespace std;
