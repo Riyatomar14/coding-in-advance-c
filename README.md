@@ -232,6 +232,23 @@ int main() {
 
 ## 4.![image](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/a7ab1930-b91a-4e0b-b69c-0b5607de118c)
 
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+    int N;
+    cin >> N;
+    int arr[N];
+    for (int i = 0; i < N; i++) {
+        cin >> arr[i];        
+    }
+    for (int j = N - 1; j >= 0; j--) {
+        cout << arr[j] << " ";
+    }
+    return 0;
+
 
 
 
