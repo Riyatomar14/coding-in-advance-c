@@ -1,4 +1,5 @@
-# coding-in-advance-c
+# c++ programs
+
 ## 1. rectangle
 # 5 4 
 # ****
@@ -280,5 +281,106 @@ int main() {
     return 0;
 }
 
+## 6. sum of array
 
+#include <iostream>
+using namespace std;
 
+int main() {
+    int n;
+    cout<<"array size:";
+    cin>>n;
+    int arr[n];
+    int sum = 0;
+    for(int i=0;i<=n;i++){
+        cin>>arr[i];
+        sum += arr[i];
+    }
+    cout<<sum;
+     
+
+    return 0;
+}
+ 
+## 7.product 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout<<"array size:";
+    cin>>n;
+    int arr[n];
+    int product = 1;
+    for(int i=0;i<=n;i++){
+        cin>>arr[i];
+        product *= arr[i];
+    }
+    cout<<product;
+     
+
+    return 0;
+}
+
+## 8. linear search
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[]={2,4,6,7,89,56,79,34,56,35,69,27,81,02};
+    int n = sizeof(arr)/ sizeof (arr[0]);
+    int s;
+    cout<<"target element";
+    cin >> s;
+    bool flag = false ; // false means s is not present 
+    for(int i =0;i<=n;i++){
+        if(arr[i]==s){
+        flag = true ; // true means s is present
+        break;
+        }
+    }
+    if (flag == true) cout<<s<<"is present";
+    else cout<<s<<"not present";
+    
+    return 0;
+}
+
+## 9. maximum element in the array
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {2,4,6,7,89,56,79,34,56,35,69,27,81,2};
+    int n = sizeof(arr)/ sizeof (arr[0]);
+    int max;
+    max= arr[0];
+    for(int i =0;i<n;i++){
+        if (max < arr[i]) max=arr[i];
+       
+    }
+    cout<<max;
+    
+    return 0;
+}
+
+## 10. minimum element in the array
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {2,4,6,7,89,56,79,34,56,35,69,27,81,2};
+    int n = sizeof(arr)/ sizeof (arr[0]);
+    int min;
+    min= arr[0];
+    for(int i =0;i<n;i++){
+        if (min > arr[i]) min=arr[i];
+       
+    }
+    cout<<min;
+    
+    return 0;
+}
