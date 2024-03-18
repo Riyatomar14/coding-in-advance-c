@@ -384,3 +384,62 @@ int main() {
     
     return 0;
 }
+
+# note-
+
+array is a contigious memory allocation means it has a fix size . Most important point is that array is by default call by refence in functions.
+
+vectors are dynamic memory allocation means it does not have a fix size.
+
+## 11. reverse the array
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {2,4,6,7,89,56};
+    int n = sizeof(arr)/ sizeof (arr[0]);
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+    cout << endl;
+    int brr[n];
+    for(int i=0;i<n;i++){
+        brr[i]=arr[n-1-i];
+    }
+    for(int i=0;i<n;i++){
+        cout<<brr[i]<<" ";
+    }
+    return 0;
+    
+}
+
+## 12. reverse the array without any extra array
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {2, 4, 6, 7, 89, 56};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    cout << "Original array: ";
+    for(int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    
+    int i = 0, j = n - 1;
+    while(i < j) {
+        swap(arr[i], arr[j]);
+        i++;
+        j--;
+    }
+    
+    cout << "Reversed array: ";
+    for(int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    
+    return 0;
+}
