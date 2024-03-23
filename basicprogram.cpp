@@ -470,6 +470,5 @@ int main() {
     return 0;
 }
 
-![Screenshot 2024-03-23 190735](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/435c1764-e739-407f-ad32-ba4b0f161fac)
 
 
