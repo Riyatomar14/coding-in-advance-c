@@ -470,5 +470,11 @@ int main() {
     return 0;
 }
 
+result- Merged string: apbqcrdstw
+
+## 14. string to interger by ascii value 
+
+
+
 
 
