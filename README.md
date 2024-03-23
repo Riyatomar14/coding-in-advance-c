@@ -335,7 +335,7 @@ int main() {
     cout<<"target element";
     cin >> s;
     bool flag = false ; // false means s is not present 
-    for(int i =0;i<=n;i++){
+    for(int i=0;i<=n;i++){
         if(arr[i]==s){
         flag = true ; // true means s is present
         break;
@@ -357,7 +357,7 @@ int main() {
     int n = sizeof(arr)/ sizeof (arr[0]);
     int max;
     max= arr[0];
-    for(int i =0;i<n;i++){
+    for(int i=0;i<n;i++){
         if (max < arr[i]) max=arr[i];
        
     }
@@ -443,3 +443,31 @@ int main() {
     
     return 0;
 }
+
+## 13. merge string in alternative way
+
+#include <iostream>
+using namespace std;
+
+string merge_string(string str1, string str2) {
+    string result = "";
+    for(int i = 0; i < str1.size() || i < str2.size(); i++) {
+        if(i < str1.size()) {
+            result += str1[i];
+        }
+        if(i < str2.size()) {
+            result += str2[i];
+        }
+    }
+    return result;
+}
+
+int main() {
+    string str1 = "abcd";
+    string str2 = "pqrstw";
+    string merged = merge_string(str1, str2);
+    cout << "Merged string: " << merged << endl;
+    return 0;
+}
+
+
