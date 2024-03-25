@@ -532,6 +532,63 @@ int main() {
     return 0;
 }
 
+## 17. how to capitalize the first letter of each word in string 
+
+#include <iostream>
+#include <string>
+using namespace std;
+char toUpperCase(char c) {
+    if (c >= 'a' && c <= 'z') {
+        return c - 32;
+    } else {
+        return c;
+    }
+}
+void capitalizeFirstLetters(string& str) {
+    int len = str.length();
+    if (len > 0 && str[0] >= 'a' && str[0] <= 'z') {
+        str[0] = toUpperCase(str[0]);
+    }
+    for (int i = 1; i < len; i++) {
+        if (str[i - 1] == ' ' && str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = toUpperCase(str[i]);
+        }
+    }
+}
+int main() {
+    string str = "hello how are you";
+    capitalizeFirstLetters(str);
+    cout << str << endl;
+    return 0;
+}
+
+## 18. count word in string
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    string str;
+    cout << "Enter the string: ";
+    getline(cin, str);
+    int wordCount = 0;
+    bool inWord = false; 
+    for (int i = 0; i < str.length(); i++) {
+        if (str[i] != ' ' && !inWord) {
+            wordCount++;
+            inWord = true;
+        } 
+        else if (str[i] == ' ') {
+            inWord = false;
+        }
+    }
+    
+    cout << "Number of words: " << wordCount << endl;
+
+    return 0;
+}
+
+## 19. 
 
 
 
