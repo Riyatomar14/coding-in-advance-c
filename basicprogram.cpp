@@ -588,7 +588,7 @@ int main() {
     return 0;
 }
 
-## 19. remove duplicate characters from the string 
+## 19. program to Check whether a given substring is present in the given string 
 
 
 
