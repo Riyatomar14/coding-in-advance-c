@@ -474,7 +474,63 @@ result- Merged string: apbqcrdstw
 
 ## 14. string to interger by ascii value 
 
-## 15.
+## 15. max occuring in the string
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str;
+    int maxCount = 0;
+    char maxChar;
+    
+    cout << "Enter a line of string: ";
+    getline(cin, str);
+
+    for (int i = 0; i < str.length(); i++) {
+        int count = 0;
+        for (int j = 0; j < str.length(); j++) {
+            if (j < i && str[i] == str[j]) {
+                break;
+            }
+            if (str[i] == str[j]) {
+                count++;
+            }
+        }
+        if (count > maxCount) {
+            maxCount = count;
+            maxChar = str[i];
+        }
+    }
+
+    cout << "Character with maximum occurrence: '" << maxChar << "' (" << maxCount << " times)" << endl;
+
+    return 0;
+}
+
+## 16. how to add two string
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char str1[25],str2[25];
+    int i,j;
+    cout<<"enter the string1:";
+    cin>>str1;
+    cout<<"enter the string2:";
+    cin>>str2;
+    for(i=0;str1[i] != '\0';i++){
+        
+    };
+    for(j=0;str2[j] != '\0';j++,i++){
+        str1[i]=str2[j];
+    };
+    str1[i]='\0';
+    cout<<"concatination of string: "<< str1;
+    return 0;
+}
 
 
 
