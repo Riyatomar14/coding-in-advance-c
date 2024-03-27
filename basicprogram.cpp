@@ -590,8 +590,32 @@ int main() {
 
 ## 19. program to Check whether a given substring is present in the given string 
 
+#include <iostream>
+using namespace std;
 
-
+int main() {
+    string str;
+    string substr;
+    int i,j;
+    cout<<"enter the main string:";
+    getline(cin,str);
+    cout<<"enter the substring:";
+    getline(cin,substr);
+    
+    for(i=0;i<= str.length()-substr.length();i++){
+        for(j=0;j<substr.length();j++){
+            if(str[i+j]!=substr[j]){
+                break;
+            }
+        }
+        if(j==substr.length()){
+            cout<<i+1<<"is the sub string indexnumber"<<endl;
+        }
+    }
+    cout<<"substring not found"<<endl;    
+    
+    return 0;
+}
 
 
 
