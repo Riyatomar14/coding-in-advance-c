@@ -25,10 +25,48 @@ class is a user defined data type.thats why we havee to intilize it.it provide s
 
 ## 1.private- directly cannot accessed(it give security if you want to access, through public you can access private)
 
+    define data member in function.
+    
 ## 2.public- direct accessed
 
+    define function methods /member function in function 
+    
 ## 3.protected - directly cannot accessed (at inheritance time it give permission to inhert but private cannot be accessed through inhertance)
 
-## 
+note: 1. object defined in main function from which it called the public function not the private . If whole class is private then nothuing is accessed from main i.e from object.
+
+2.class function can be defined outside or inside the class ,if we define function inside the class efficiency of the program is low.if you can defined class function outside the class with the help of scope resolution.
+
+class function define inside
+
+#include <iostream>
+using namespace std;
+
+class addition
+{
+private:
+    int a, b;
+
+public:
+    void getdata()
+    {
+        cout << "Enter the two numbers: ";
+        cin >> a >> b;
+    }
+    void putdata()
+    {
+        cout << "Addition is " << a + b;
+    }
+};
+
+int main()
+{
+    addition aa;
+    aa.getdata();
+    aa.putdata();
+   
+    return 0;
+}
+
 
 
