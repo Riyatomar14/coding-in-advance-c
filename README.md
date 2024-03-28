@@ -15,19 +15,19 @@ In C language it is POP(procedure oriented programming) but now C with classes,k
 
 it is the combionation of data members(variables) and member function put together into a single unit.
 
-## Object - object is an instance of class.
+# Object - object is an instance of class.
 
 mainly it is a smaller unit which represent the bigger unit, class. object have the features or the property of the class.
 
 class is a user defined data type.thats why we havee to intilize it.it provide security.
 
-## access specifier / visibility modifiers(when used with inhertance)
+# access specifier / visibility modifiers(when used with inhertance)
 
-# 1.private- directly cannot accessed(it give security if you want to access, through public you can access private)
+## 1.private- directly cannot accessed(it give security if you want to access, through public you can access private)
 
-# 2.public- direct accessed
+## 2.public- direct accessed
 
-# 3.protected - directly cannot accessed (at inheritance time it give permission to inhert but private cannot be accessed through inhertance)
+## 3.protected - directly cannot accessed (at inheritance time it give permission to inhert but private cannot be accessed through inhertance)
 
 ## 
 
