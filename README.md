@@ -103,13 +103,13 @@ int main()
     return 0;
 }
 
-## array of object and object of array
+# array of object and object of array
 
-### array of object - let xyz be class and aa be object 
+## array of object - let xyz be class and aa be object 
 
 xyz aa[5]; // aa object has its own array 
 
-### object of array - means array inside the class , so object can also access this array
+## object of array - means array inside the class , so object can also access this array
 
 class xyz
 {
@@ -119,3 +119,9 @@ int main()
 {
 xyz aa; // aa object can access the array inside the class
 }
+
+![image](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/06ca9c49-fcc7-48bf-a0b2-0e0687d5343b)
+
+# object as function argument 
+
+
