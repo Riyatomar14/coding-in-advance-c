@@ -37,7 +37,7 @@ note: 1. object defined in main function from which it called the public functio
 
 2.class function can be defined outside or inside the class ,if we define function inside the class efficiency of the program is low.if you can defined class function outside the class with the help of scope resolution.
 
-class function define inside
+/*class function define inside */
 
 #include <iostream>
 using namespace std;
@@ -68,5 +68,38 @@ int main()
     return 0;
 }
 
+/* function outside the class */
 
+#include <iostream>
+using namespace std;
+
+class addition
+{
+private: // data member is defined
+    int a, b;
+
+public: //member function defined
+    void getdata();
+    void putdata();
+    
+};
+// type classname :: functionname(write argument if given)
+// outside the class function defined by scope resolution
+void addition :: getdata()
+{
+        cout << "Enter the two numbers: ";
+        cin >> a >> b;
+    }
+void addition :: putdata()
+{
+        cout << "Addition is " << a + b;
+    }
+int main()
+{
+    addition aa; //aa is object
+    aa.getdata();
+    aa.putdata();
+   
+    return 0;
+}
 
