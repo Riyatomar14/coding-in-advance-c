@@ -209,5 +209,6 @@ int main() {
     return 0;
 }
 
+![Screenshot 2024-03-29 003748](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/e7b32ceb-f414-44ea-b48e-52ade9a14aa7)
 
 
