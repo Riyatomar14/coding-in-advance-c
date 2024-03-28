@@ -166,3 +166,48 @@ int main()
     return 0;
 }
 
+# friend function-
+
+we know that the private section of class is accessed only and only through the public section of the same class.
+
+what if, we want to give access to private member, a function outside the class . in such circumstances we use the concept of friend function.
+
+### key point-
+
+1.a friend function cannot be called using a object of the class.it is called like a normal function.
+
+2. friend function can use the resources of a class only using an object of the same class.
+
+3. usually a friend function has object as an argument.
+
+4. it does not affect by private or public.
+
+ #include <iostream>
+using namespace std;
+
+class demo
+{
+    int a,b;
+    public:
+    void getdata();
+    friend int sum(demo);
+};
+void demo:: getdata()
+{
+        cout<<"enter two numbers:";
+        cin>>a>>b;
+}
+int sum(demo aa) //declare as a normal function
+{
+    return(aa.a+aa.b);
+}
+int main() {
+    demo aa;
+    aa.getdata();
+    cout<<"addition"<<sum(aa);
+
+    return 0;
+}
+
+
+
