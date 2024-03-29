@@ -450,9 +450,35 @@ int main() {
     return 0;
 }
 
-
-
-
-
 ## destructors ()
+
+like constructors destructors are also membder function whose name is similar to the class name having(~) titled sign ust before it's name.
+a destructor is used to destroy object once the object goes out of scope.a destructor has no return gtype as well as it does not take any arguments.  
+
+#include <iostream>
+using namespace std;
+
+int count = 0;
+class demo
+{
+  public:
+        demo()
+        {
+            count++;
+            cout<<"no of object created:"<<count<<endl;
+        }
+        ~demo() // destructor --> automatically delete the object as it is out of the scope 
+        {
+            count--;
+            cout<<"no of object destroyed:"<<count<<endl;;
+        }
+};
+int main() {
+    demo aa,bb,cc;
+    {
+        demo dd;
+    }
+
+    return 0;
+}
 
