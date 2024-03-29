@@ -413,5 +413,42 @@ int main() {
     return 0;
 }
 
+## constructor overloading 
 
+c++ provides us one provision using which we can incorporate more than one constructor in a single program.but these constructors may have differnt type of argument/different number of arguments.this provision of having more than one constructors in a single program is callcalled constructor overloading.
+
+#include <iostream>
+using namespace std;
+class demo
+{
+    int a;
+    public:// all the three constructor all at one time --> constructor overloading
+       demo() 
+       {
+           a=10;
+       }
+       demo(int x) //parameterised constructor
+       {
+           a=x;
+       }
+       demo(demo &z) //copy constructor 
+       {
+           a = z.a;
+       }
+       void putdata()
+       {
+          cout<<"\na"<<a; 
+       }
+};
+int main() {
+    demo aa;
+    demo bb(20);
+    demo cc(aa);
+    aa.putdata();
+    bb.putdata();
+    cc.putdata();
+    return 0;
+}
+
+## destructors ()
 
