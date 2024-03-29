@@ -83,7 +83,7 @@ public: //member function defined
     void putdata();
     
 };
-// type classname :: functionname(write argument if given)
+// type classname :: functionname(write argument if any)
 // outside the class function defined by scope resolution
 void addition :: getdata()
 {
@@ -149,7 +149,7 @@ class time
     {
         h = (t1.m + t2.m) / 60;
         m = (t1.m + t2.m) % 60;
-        h += t1.h + t2.h;
+        h = h + t1.h + t2.h;
     }
 };
 
@@ -182,7 +182,7 @@ what if, we want to give access to private member, a function outside the class 
 
 4. it does not affect by private or public.
 
- #include <iostream>
+#include <iostream>
 using namespace std;
 
 class demo
