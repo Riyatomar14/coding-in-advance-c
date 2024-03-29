@@ -296,3 +296,122 @@ int main() {
     demo :: abc(); // static member function call by classname
     return 0;
 }
+
+# constructors
+
+constructors are the special member function which is used to intialize value of a variable inside an object.
+
+the major point about constructors
+
+1. contructor's name is same as class name.
+
+2. a constructor is automatically invoked as soon as an object of its class is created.
+
+3. a constructor has not any return type not even "void".
+
+4. constructor allows default argument concept.
+
+5. a constructor cannot be inherited.
+
+6. constructor are defined inside public section.
+
+7. constructors cannot be "virtual".
+
+note: constructors divided into three constructors-
+
+#### 1.default constructor- a constructor having no argument.
+
+#include <iostream>
+using namespace std;
+
+class demo
+{
+    int a,b;
+    public:
+    demo() // default constructor
+    {
+        a=10;
+        b=20;
+    }
+    void putdata();
+    };
+void demo :: putdata()
+{
+    cout<<"a"<<a<<"\tb"<<b;
+}
+int main()
+{
+    demo aa;
+    aa.putdata();
+    return 0;
+}
+
+#### 2.parameterized constructor- a constructor having argument.
+
+#include <iostream>
+using namespace std;
+
+class demo
+{
+    int a,b;
+    public:
+    demo(int m,int n) // Parametrised constructor
+    {
+        a=m;
+        b=n;
+    }
+    void putdata();
+};
+void demo :: putdata()
+{
+    cout<<"a"<<a<<"\tb"<<b;
+}
+int main()
+{
+    int x,y; //user defined
+    cout<<"enter the two no:";
+    cin>>x>>y;
+    demo aa(x,y);
+    aa.putdata();
+    return 0;
+}
+
+#### 3.copy constructor-when we need to initialize the variable of an object with the value of variables of another object of same type,then we use the concept of copy constructor.
+
+note: while making copy constructor, first make default(mostly) or parameterised constructor then make copy constructor then same object act as the argument .
+
+example- when we make the class demo
+demo aa;
+demo bb=aa; or demo bb(aa); //for copy constructor
+
+#include <iostream>
+using namespace std;
+class demo
+{
+    int a;
+    public:
+       demo() //default constructor for the object we intialized in the main 
+       {
+           a=10;
+       }
+       demo(demo &z) //&-for the direct access the object 
+       {
+           a = z.a;
+       }
+       void putdata()
+       {
+          cout<<"\na"<<a; 
+       }
+};
+int main() {
+    demo aa;
+    demo bb(aa);
+    demo cc=bb;
+    aa.putdata();
+    bb.putdata();
+    cc.putdata();
+    return 0;
+}
+
+
+
