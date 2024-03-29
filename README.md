@@ -266,4 +266,33 @@ int main() {
 
 2.also static member function cannot be part of object and hence independent . and hence call by using class name example- classname:: functionname
 
+#include <iostream>
+using namespace std;
 
+class demo
+{
+    int x;
+    static int y;  //z value same in the whole program
+    public:
+    void getdata(int a)
+    {
+        x=a;
+        y=y+1;
+    }
+    void putdata()
+    {
+        cout<<"x="<<x<<"\ty="<<y;
+    }
+    static void abc()
+    {
+        cout<<"static varible="<<y;
+    }
+};
+int demo ::y;  //static data member should be define 
+int main() {
+    demo aa;  //object aa should use x,y only and z also but it is not the part of aa
+    aa.getdata(10);
+    aa.putdata();
+    demo :: abc(); // static member function call by classname
+    return 0;
+}
