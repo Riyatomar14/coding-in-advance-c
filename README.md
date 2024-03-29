@@ -211,4 +211,59 @@ int main() {
 
 ![Screenshot 2024-03-29 003748](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/e7b32ceb-f414-44ea-b48e-52ade9a14aa7)
 
+# static member 
+
+there are two type of static members-
+
+1.static data member  2.static member function
+
+## 1.static data member(variable)
+
+a) it is intialized to zero , whenever the first object of its class is created.no other intialization is permitted .
+
+b) for making any data member static we use "static" keyword.example - static int x;
+
+c) only one copy of static  data  member is created and shared by all. means if more than one object is created then they all have same data member value or variable value and accesssed by any object.
+
+d) it is visiblility in entire program.
+
+e) it is not the part of object and thats why static data member is indepedent  but all object can access .
+
+## static program 
+
+#include <iostream>
+using namespace std;
+
+class demo
+{
+    int x,y;
+    static int z;  //z value same in the whole program
+    public:
+    void getdata(int a,int b)
+    {
+        x=a;
+        y=b;
+        z=z+1;
+    }
+    void putdata()
+    {
+        cout<<"x="<<x<<"\ty="<<y<<"\tz="<<z;
+    }
+};
+int demo ::z;  //static data member should be define 
+int main() {
+    demo aa,bb;  //object aa should use x,y only and z also but it is not the part of aa
+    aa.getdata(5,10);
+    bb.getdata(20,30);
+    aa.putdata();
+    bb.putdata();
+    return 0;
+}
+
+## 2.static member function
+
+1.static member function can access only static data members .
+
+2.also static member function cannot be part of object and hence independent . and hence call by using class name example- classname:: functionname
+
 
