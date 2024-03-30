@@ -482,3 +482,29 @@ int main() {
     return 0;
 }
 
+# Inheritance
+
+Inheritance is one of the most important feature of object oriented programming .this provides us the capability to re-use the pre-existing code to the new project/new software.it is always better to re-use the pre-existing code rather than developing all over again.this re-usability feature is incorporated by the concept of inheritance.
+note: base class(parent class) and derived class(child class).
+
+## types of inheritance -
+1.single-the type of inheritance in which one class(parent class) is being inherited by another class(child class).
+
+when one base class is being derived by a single sub-class,this is called single inheritance. it means when there is one base class and it is being derived by another single derived class,then it is called single inheritance.
+
+    
+
+2.mutiple -the type of inheritance in which more than one class(parent class) is being inherited by another class(child class)
+
+3.multi-level-the type of inheritance in which one class inherits other class,and then this other class is being inherited by another.
+    
+4.hybrid-  when we combine two or more types of inheritance into one then it is called hybrid inheritance.
+    
+5.hierarchical- in this type of inheritance in which one base class is being inherited by mutiple derived class.
+
+## visiability modifiers(derived class)-
+
+1.private- can inherited only protected and public not privare.protected and public both goes to private.
+2.protected - can inherted only protected and public not privare.protected and public both goes to protected.
+3.public - can inherted only protected and public not privare.protected goes to protected and pulic goes to public.
+
