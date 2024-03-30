@@ -492,7 +492,42 @@ note: base class(parent class) and derived class(child class).
 
 when one base class is being derived by a single sub-class,this is called single inheritance. it means when there is one base class and it is being derived by another single derived class,then it is called single inheritance.
 
+    /*single inheritance */
     
+#include <iostream>
+using namespace std;
+class A
+{
+    protected:
+    int x;
+    public:
+    void input()
+    {
+        cout<<"\nenter the number1:";
+        cin>>x;
+    }
+};
+class B:public A
+{
+    int y;
+    public:
+    void getdata()
+    {
+        cout<<"\nenter number2:";
+        cin>>y;
+    }
+    void putdata()
+    {
+        cout<<"\naddition="<<x+y;
+    }
+};
+int main() {
+    B aa; // object intialise with the derived class 
+    aa.input();
+    aa.getdata();
+    aa.putdata();
+    return 0;
+}  
 
 2.mutiple -the type of inheritance in which more than one class(parent class) is being inherited by another class(child class)
 
