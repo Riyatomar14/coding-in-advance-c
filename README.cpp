@@ -645,6 +645,51 @@ int main() {
 
 4.hybrid-  when we combine two or more types of inheritance into one then it is called hybrid inheritance.
 
+when we combine the concept of two or more basic inheritance(single inheritane,multiple inheritance,multi-level inheritance, hierararchical inheritance) then the new type of inheritance is referred to as hybrid inheritance.
+
+#include <iostream>
+using namespace std;
+
+class A
+{
+    public:
+    void message()
+    {
+        cout<<"\ninside class A:";
+    }
+};
+class B: public A
+{
+    public:
+    void display()
+    {
+        cout<<"\ninside class B:";
+    }
+};
+class C
+{
+    public:
+    void putdata()
+    {
+        cout<<"\ninside class C:";
+    }
+};
+class D:public B,public C
+{
+    public:
+    void data()
+    {
+        cout<<"\ninside class D:";
+    }
+};
+int main() {
+    D dd;
+    dd.message();
+    dd.display();
+    dd.putdata();
+    dd.data();
+    return 0;
+}
 
 5.hierarchical- in this type of inheritance in which one base class is being inherited by mutiple derived class.
 
