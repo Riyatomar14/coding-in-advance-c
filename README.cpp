@@ -531,11 +531,159 @@ int main() {
 
 2.mutiple -the type of inheritance in which more than one class(parent class) is being inherited by another class(child class)
 
+when there are more than one base class is inherited by a single derived class , then it is called the concept of mutiple inheritance.
+
+/* mutiple inheritance */
+
+#include <iostream>
+using namespace std;
+
+class A
+{
+    protected:
+    int a;
+    public:
+    void input()
+    {
+        cout<<"\nenter the no1:";
+        cin>>a;
+    }
+};
+class B
+{
+    protected:
+    int b;
+    public:
+    void getdata()
+    {
+        cout<<"\nenter the no2:";
+        cin>>b;
+    }
+};
+class c:public A,public B
+{
+    public:
+    void addition()
+    {
+        cout<<"\naddition ="<<a+b;
+    }
+};
+int main() {
+    c aa;
+    aa.input();
+    aa.getdata();
+    aa.addition();
+    return 0;
+}
+
 3.multi-level-the type of inheritance in which one class inherits other class,and then this other class is being inherited by another.
+
+it is type of of inheritance in which one super class/base class is derived by a child class and then this child class is further derived by another child class and so on.this type of inheritance is called mutilevel inheritance .
+
+/* mutilevel inheritance */
+
+#include <iostream>
+using namespace std;
+class A
+{
+    protected:
+    int roll;
+    public:
+    void getroll()
+    {
+        cout<<"\nenter the roll no.:";
+        cin>>roll;
+    }
+    void putroll()
+    {
+        cout<<roll;
+    }
     
+};
+class B : public A
+{
+    protected:
+    int sub1,sub2;
+    public:
+    void getmarks()
+    {
+        cout<<"enter marks of two subjects;";
+        cin>>sub1>>sub2;
+    }
+    void putmarks()
+    {
+        cout<<"\nmarks of sub1:"<<sub1;
+        cout<<"\nmarks of sub2":<<sub2;
+    }
+};
+class c : public B
+{
+    int sportsmarks;
+    public:
+    void getsportsmarks()
+    {
+        cout<<"\nenter the sports marks:";
+        cin>>sportsmarks;
+    }
+    void total()
+    {
+        putroll();
+        putmarks();
+        cout<<"sportsmarks"<<sportsmarks;
+        cout<<"\ntotal marks"<<sub1+sub2+sportsmarks;
+    }
+};
+int main() {
+     c aa;
+     aa.getroll();
+     aa.getmarks();
+     aa.getsportsmarks();
+     aa.total();
+
+    return 0;
+}
+
 4.hybrid-  when we combine two or more types of inheritance into one then it is called hybrid inheritance.
-    
+
+
 5.hierarchical- in this type of inheritance in which one base class is being inherited by mutiple derived class.
+
+/* hierarchical inheritance*/
+
+#include <iostream>
+using namespace std;
+
+class A
+{
+    public:
+    void message()
+    {
+        cout<<"\nwelcome to inheritance:";
+    }
+};
+class B: public A
+{
+    public:
+    void display()
+    {
+        cout<<"\ninside class B";
+    }
+};
+class C:public A
+{
+    public:
+    void putdata()
+    {
+        cout<<"\ninside class C";
+    }
+};
+int main() {
+    B aa;
+    C bb; // we have to make two object as there are two derived class
+    aa.display();aa.message();
+    bb.putdata();bb.message();
+    return 0;
+}
 
 ## visiability modifiers(derived class)-
 
