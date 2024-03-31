@@ -858,3 +858,128 @@ int main() {
     return 0;
 }
 
+# ambiguity resolution in inheritance 
+
+suppose that two classes named A and B both have a member named x , and a class named C inherits from both A and B . An attempt to access x from class C would be ambiguous. You can resolve ambiguity by qualifying a member with its class name using the scope resolution ( :: ) operator.
+
+#include <iostream>
+using namespace std;
+class A
+{
+    protected:
+    int a;
+    public:
+    void input()
+    {
+        cout<<"\nenter the value:";
+        cin>>a;
+    }
+    void output()
+    {
+        cout<<"\na"<<a;
+    }
+};
+class B
+{
+    protected:
+    int b;
+    public:
+    void input()
+    {
+        cout<<"\nenter the value:";
+        cin>>b;
+    }
+    void output()
+    {
+        cout<<"\nb"<<b;
+    }
+};
+class C:public A,public B
+{
+    int c;
+    public:
+    void input() //if C has different function other then A and B then it get ambiguous what it called function of A and B so, this is a error.... if have to specify in its function 
+    {
+        cout<<"\nenter the value";
+        cin>>c;
+        // A::input();
+        //b::input();
+    }
+    void display()
+    {
+        cout<<"\nc"<<c;
+    }
+};
+int main() {
+    C aa;
+    aa.input();
+    aa.B::input();
+    aa.A::input();
+    return 0;
+}
+
+### most important topic 
+
+virtual function/pure virtual functiomn---->early bindin/late binding---> run time polymorphism
+
+virtual base class/ virtual function
+base class means ..from inheritance 
+virtual is a keyword in c++.a virtual function is re-defined in derived class.
+note:most important point noted that when a virtual function is defined in base class,then the pointer to base class is created.now,on the basis of type of object assigned,the respective class function is called.
+
+/* virtual function */
+
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+    virtual void show()
+    {
+        cout<<"\nBase class";
+    }
+};
+class B:public A
+{
+    public:
+    void show()
+    {
+        cout<<"\nderived class";
+    }
+};
+
+int main() {
+    A *bptr;B aa; //on the basis of type of object assigned,the respective class function is called
+    bptr=&aa;
+    bptr->show();
+
+    return 0;
+}
+
+/*pure virtual function*/
+
+
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+    virtual void show()=0; //A pure virtual function is a function that must be overridden in a derived class and need not be defined. 
+};
+class B:public A
+{
+    public:
+    void show()
+    {
+        cout<<"\nderived class";
+    }
+};
+
+int main() {
+    A *bptr;B aa; //on the basis of type of object assigned,the respective class function is called
+    bptr=&aa;
+    bptr->show();
+
+    return 0;
+}
+
