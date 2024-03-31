@@ -1,40 +1,30 @@
 # function overloading 
-
 function overloading concept of polymorphism enables us to write same name mutiple functions/methods within a program.
 but we have a restrictions that all the function having same name must follow-
 
 1.no. of argument
-
 2.type of argument
 
 # object oriented programming (OOPS)
-
 In C language it is POP(procedure oriented programming) but now C with classes,known as C++(C=C+1).
 
 ## Class
-
 it is the combionation of data members(variables) and member function put together into a single unit.
 
 # Object - object is an instance of class.
-
 mainly it is a smaller unit which represent the bigger unit, class. object have the features or the property of the class.
-
 class is a user defined data type.thats why we havee to intilize it.it provide security.
 
 # access specifier / visibility modifiers(when used with inhertance)
-
-## 1.private- directly cannot accessed(it give security if you want to access, through public you can access private)
-
-    define data member in function.
+ 1.private- directly cannot accessed(it give security if you want to access, through public you can access private)
+            define data member in function.
     
-## 2.public- direct accessed
-
-    define function methods /member function in function 
+2.public- direct accessed
+          define function methods /member function in function 
     
-## 3.protected - directly cannot accessed (at inheritance time it give permission to inhert but private cannot be accessed through inhertance)
+3.protected - directly cannot accessed (at inheritance time it give permission to inhert but private cannot be accessed through inhertance)
 
 note: 1. object defined in main function from which it called the public function not the private . If whole class is private then nothuing is accessed from main i.e from object.
-
 2.class function can be defined outside or inside the class ,if we define function inside the class efficiency of the program is low.if you can defined class function outside the class with the help of scope resolution.
 
 /*class function define inside */
@@ -104,8 +94,7 @@ int main()
 }
 
 # array of object and object of array
-
-## array of object - let xyz be class and aa be object 
+ array of object - let xyz be class and aa be object 
 
 xyz aa[5]; // aa object has its own array 
 
@@ -770,5 +759,102 @@ int main() {
     return 0;
 }
 
+/* constructor handling in  inheritance */
 
+#include <iostream>
+using namespace std;
+
+class A
+{
+    protected:
+    int a;
+    public:
+    A(int x)
+    {
+        a=x;
+    }
+    void display()
+    {
+        cout<<"\nA="a;
+    }
+};
+class B
+{
+    protected:
+    int b;
+    public:
+    A(int y)
+    {
+        b=y;
+    }
+    void putdata()
+    {
+        cout<<"\nB="b;
+    }
+};
+class C:public A,public B
+{
+    int c;
+    public:
+    C(int p,int q,int r):A(p),B(q) //constructor handling in inhenitance
+    {
+        c=r;
+    }
+    void show()
+    {
+        cout<<"\nc"<<c;
+    }#include <iostream>
+using namespace std;
+
+class A {
+protected:
+    int a;
+public:
+    A(int x) {
+        a = x;
+    }
+    void display() {
+        cout << "\nA=" << a;
+    }
+};
+
+class B {
+protected:
+    int b;
+public:
+    B(int y) {
+        b = y;
+    }
+    void putdata() {
+        cout << "\nB=" << b;
+    }
+};
+
+class C : public A, public B {
+    int c;
+public:
+    C(int p, int q, int r) : A(p), B(q) //constructor handling in inheritance
+    { 
+        c = r;
+    }
+    void show() {
+        cout << "\nc=" << c;
+    }
+};
+
+int main() {
+    C aa(10, 20, 30);
+    aa.display();
+    aa.putdata();
+    aa.show();
+    return 0;
+}
+
+};
+
+int main() {
+    C aa(10,20,30);
+    aa.display();aa.putdata();aa.show();
+    return 0;
+}
 
