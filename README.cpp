@@ -120,8 +120,6 @@ int main()
 xyz aa; // aa object can access the array inside the class
 }
 
-![image](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/06ca9c49-fcc7-48bf-a0b2-0e0687d5343b)
-
 # object as function argument 
 
 
@@ -732,7 +730,12 @@ int main() {
 
 ## visiability modifiers(derived class)-
 
-1.private- can inherited only protected and public not privare.protected and public both goes to private.
-2.protected - can inherted only protected and public not privare.protected and public both goes to protected.
-3.public - can inherted only protected and public not privare.protected goes to protected and pulic goes to public.
+1.private inheritance- can inherited only protected and public not privare.protected and public both goes to private.
+2.protected inheritance  - can inherted only protected and public not privare.protected and public both goes to protected.
+3.public inheritance - can inherted only protected and public not privare.protected goes to protected and pulic goes to public.
+
+# function overriding/method overriding
+
+suppose we have two class having same name function and also having same signature or argument ,so in this case ,obviously object of derived class is created and the function of derived class is called and executed.so,here, the function of derived class has override the function of the base class.this concept is called method overriding/function overriding.
+
 
