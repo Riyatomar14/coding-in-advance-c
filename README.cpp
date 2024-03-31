@@ -738,4 +738,37 @@ int main() {
 
 suppose we have two class having same name function and also having same signature or argument ,so in this case ,obviously object of derived class is created and the function of derived class is called and executed.so,here, the function of derived class has override the function of the base class.this concept is called method overriding/function overriding.
 
+/* method overriding */
+
+#include <iostream>
+using namespace std;
+
+class A
+{
+    public:
+    void display()
+    {
+        cout<<"\nbase class";
+    }
+};
+class B:public A
+{
+    public:
+    void display() //same function name and argument --> method overriding
+    // A::display(); --> you can called inside the function itself 
+    {
+        cout<<"\nderived class";
+    }
+};
+
+int main() {
+    B aa;
+    aa.display(); // first it check that the function is inside me or not then it look into the the inherited function 
+    aa.A::display(); // inherited function called in main function
+    
+
+    return 0;
+}
+
+
 
