@@ -440,7 +440,7 @@ int main() {
 ## destructors ()
 
 like constructors destructors are also membder function whose name is similar to the class name having(~) titled sign ust before it's name.
-a destructor is used to destroy object once the object goes out of scope.a destructor has no return gtype as well as it does not take any arguments.  
+a destructor is used to destroy object once the object goes out of scope.a destructor has no return type as well as it does not take any arguments.  
 
 #include <iostream>
 using namespace std;
