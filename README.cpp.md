@@ -20,6 +20,7 @@ mainly it is a smaller unit which represent the bigger unit, class. object have 
 class is a user defined data type.thats why we havee to intilize it.it provide security.
 
 # access specifier / visibility modifiers(when used with inhertance)
+
  1.private- directly cannot accessed(it give security if you want to access, through public you can access private)
             define data member in function.
     
@@ -989,3 +990,63 @@ int main() {
     return 0;
 }
 
+# Exception handling 
+
+## errors 
+there are two type of errors-
+1.logical error - errors due to wrong logic of program this error cannot be indentified by complier.
+2.semantic error - due to wrong syntax of code. this error identified by the complier.
+// run-time error ---> exception handling
+
+## Exception handling
+expections are some unpredictable circumstances or condition when our program terminate suddenly with some error/issues.
+these happens during running of the program.
+exception handling provides the facility to handle the exception so that our program keep running.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+   int a,b,c;
+   cout<<"\nenter two no's:";
+   cin>>a>>b; // if b=0 then there is an exception 
+   c=a/b;
+   cout<<"\ndivision,"<<c;
+   return 0;
+}
+
+### how to perform exception handling 
+1.hit the exception
+2.throw the exception 
+3.catch the exception
+4.perform the corrective action
+
+try ---> this block contains the code in which we put the code that might contain expection
+catch() --> whenever some exception is found in try block ,it is immediately thrown to catch () block .now catach() block will have the responsibility to handle the exception
+
+#include <iostream>
+using namespace std;
+
+int main() {
+   int a,b,c;
+   cout<<"\nenter two no's:";
+   cin>>a>>b; 
+   try
+   {
+       if(b!=0)
+       {
+        c=a/b;
+        cout<<"\ndivision,"<<c;   
+       }
+       else
+       {
+           throw(b);
+       }
+   }
+   catch(int b)
+   {
+       cout<<"divide by "<<b;
+   }
+   
+   return 0;
+}
