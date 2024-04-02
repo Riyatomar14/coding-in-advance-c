@@ -1,4 +1,5 @@
 # function overloading 
+
 function overloading concept of polymorphism enables us to write same name mutiple functions/methods within a program.
 but we have a restrictions that all the function having same name must follow-
 
@@ -6,12 +7,15 @@ but we have a restrictions that all the function having same name must follow-
 2.type of argument
 
 # object oriented programming (OOPS)
+
 In C language it is POP(procedure oriented programming) but now C with classes,known as C++(C=C+1).
 
 ## Class
+ 
 it is the combionation of data members(variables) and member function put together into a single unit.
 
 # Object - object is an instance of class.
+ 
 mainly it is a smaller unit which represent the bigger unit, class. object have the features or the property of the class.
 class is a user defined data type.thats why we havee to intilize it.it provide security.
 
@@ -94,6 +98,7 @@ int main()
 }
 
 # array of object and object of array
+
  array of object - let xyz be class and aa be object 
 
 xyz aa[5]; // aa object has its own array 
@@ -475,6 +480,7 @@ Inheritance is one of the most important feature of object oriented programming 
 note: base class(parent class) and derived class(child class).
 
 ## types of inheritance -
+
 1.single-the type of inheritance in which one class(parent class) is being inherited by another class(child class).
 
 when one base class is being derived by a single sub-class,this is called single inheritance. it means when there is one base class and it is being derived by another single derived class,then it is called single inheritance.
@@ -920,7 +926,7 @@ int main() {
 
 ### most important topic 
 
-virtual function/pure virtual functiomn---->early bindin/late binding---> run time polymorphism
+virtual function/pure virtual function---->early bindin/late binding---> run time polymorphism
 
 virtual base class/ virtual function
 base class means ..from inheritance 
