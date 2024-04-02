@@ -5,5 +5,6 @@
 ![Screenshot 2024-03-31 142521](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/dd5c56d0-3927-40bb-a8ba-9ae5a1e8f74e)
 ![Screenshot 2024-03-31 171833](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/c7990bb7-9861-435c-8168-89a409d98b78)
 ![Screenshot 2024-04-02 235240](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/dd4a7062-8d3c-4a57-9a8d-39b0c27c23ca)
-![Screenshot 2024-04-02 235240](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/a31e174d-86ff-43a2-9019-73db937c137e)
+![Screenshot 2024-04-02 235549](https://github.com/Riyatomar14/coding-in-advance-c/assets/143107173/51210a68-49ba-4229-9189-11426d41fe45)
+
 
